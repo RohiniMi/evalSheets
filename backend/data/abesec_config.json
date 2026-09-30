@@ -1,0 +1,32 @@
+{
+  "institution": {
+    "name": "ABES Engineering College",
+    "shortName": "ABESEC",
+    "location": "Ghaziabad, Uttar Pradesh - 201009",
+    "affiliation": "Affiliated to Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow",
+    "collegeCode": "032",
+    "accreditation": "NBA Accredited | NAAC 'A' Grade Accredited",
+    "logoUrl": "https://abes.ac.in/assets/images/logo.png"
+  },
+  "examDetails": {
+    "academicYear": "2025-2026 (Even Semester)",
+    "examTitle": "Pre-University Test (PUT) / Sessional Examination-II",
+    "department": "Department of Computer Science & Engineering",
+    "program": "B.Tech (Computer Science & Engineering)",
+    "semester": "4th Semester",
+    "subject": "Data Structures & Algorithms",
+    "subjectCode": "KCS-401 / BCS-301",
+    "evaluator": "Prof. (Dr.) Alok Kumar, CSE Evaluation Cell",
+    "maxMarks": 30,
+    "passingMarks": 12,
+    "evaluationEngine": "AutoGrade-ABESEC Neural Handwritten Code Verifier v3.2"
+  },
+  "sections": ["CSE-A", "CSE-B", "CSE-C", "CSE-DS", "CSE-AI"],
+  "evaluationSettings": {
+    "ocrModel": "Handwriting-DenseTransformer-v4",
+    "ocrConfidenceThreshold": 0.82,
+    "allowSyntaxTolerance": true,
+    "stepMarkingEnabled": true,
+    "penalizeMissingComplexity": true
+  }
+}

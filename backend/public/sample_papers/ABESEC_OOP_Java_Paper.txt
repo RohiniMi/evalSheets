@@ -1,0 +1,26 @@
+================================================================================
+ABES ENGINEERING COLLEGE, GHAZIABAD (COLLEGE CODE: 032)
+Department of Computer Science & Engineering
+Sessional Examination - II (Session 2025-26)
+Course: B.Tech (CSE) | Subject: Object Oriented Programming with Java (KCS-302)
+Time: 1.5 Hours                                         Max Marks: 30
+================================================================================
+
+Q1. [10 Marks]
+Write a Java program demonstrating Custom Exception Handling. Create a class `InvalidAgeException` and throw it if age entered is less than 18.
+- Exception Class Declaration & Inheritance (3 Marks)
+- Validation Method with throw keyword (4 Marks)
+- Try-catch block handling in main (3 Marks)
+
+Q2. [10 Marks]
+Implement a Thread-Safe Producer-Consumer problem in Java using `wait()` and `notify()` with a shared buffer of fixed size 5.
+- Shared Buffer with synchronized methods (4 Marks)
+- Producer thread implementation with wait condition (3 Marks)
+- Consumer thread implementation with notify signal (3 Marks)
+
+Q3. [10 Marks]
+Design a Java interface `Shape` with method `double area()`. Implement classes `Circle` and `Rectangle` and demonstrate runtime polymorphism.
+- Interface definition with abstract methods (3 Marks)
+- Concrete implementation classes (4 Marks)
+- Dynamic method dispatch in driver class (3 Marks)
+================================================================================

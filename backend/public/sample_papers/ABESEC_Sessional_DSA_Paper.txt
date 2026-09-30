@@ -1,0 +1,31 @@
+================================================================================
+ABES ENGINEERING COLLEGE, GHAZIABAD (COLLEGE CODE: 032)
+Department of Computer Science & Engineering
+Sessional Examination - II (Odd/Even Semester 2025-26)
+Course: B.Tech (CSE / IT) | Semester: 4th
+Subject: Data Structures & Algorithms (BCS-301 / KCS-401)
+Time Allowed: 1 Hour 30 Minutes                          Maximum Marks: 30
+================================================================================
+Note: Attempt all questions. All questions carry equal marks.
+
+Q1. [10 Marks]
+Write a complete C function `struct Node* reverseList(struct Node* head)` to reverse a singly linked list in-place. Show node pointer movements and state the time and space complexity.
+- Pointer Declarations & Initialization (2 Marks)
+- Loop Condition & Safe Next Pointer Storage (3 Marks)
+- Pointer Inversion & Sliding Steps (3 Marks)
+- Return New Head & Complexity Analysis (2 Marks)
+
+Q2. [10 Marks]
+Write an iterative C/C++ function `int binarySearch(int arr[], int n, int target)` that returns the 0-based index of target in a sorted array, or -1 if not found. Handle boundary conditions and prevent integer overflow during mid calculation.
+- Array Boundary Initialization (2 Marks)
+- Loop Bound & Mid Calculation (3 Marks)
+- Partitioning Logic (3 Marks)
+- Return Values (2 Marks)
+
+Q3. [10 Marks]
+Write a function `bool isBalanced(char* exp)` in C/C++ using a Stack data structure to check if a given string of parentheses containing (), {}, and [] is well-formed.
+- Stack Initialization & Pointer (2 Marks)
+- Push Logic for Opening Brackets (2 Marks)
+- Pop & Matching Verification for Closing Brackets (4 Marks)
+- Empty Stack Check at Termination (2 Marks)
+================================================================================

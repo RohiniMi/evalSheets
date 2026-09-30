@@ -1,0 +1,970 @@
+[
+  {
+    "id": "std_1790745649862",
+    "rollNo": "2503215300025",
+    "studentName": "AMAN",
+    "section": "SHUKLA",
+    "semester": "4th Sem",
+    "totalMarksObtained": 4,
+    "maxMarksTotal": 40,
+    "percentage": 10,
+    "grade": "F",
+    "status": "Needs Review",
+    "uploadedFile": "/uploads/sheet-1790745649575-9484.pdf",
+    "originalFileName": "2503215300025_AMAN_SHUKLA.pdf",
+    "fileSize": "33436.2 KB",
+    "evaluationDate": "2026-09-30T05:20:50.907Z",
+    "overallFeedback": "Needs remedial session on foundational algorithm logic and stack / pointer invariants.",
+    "answers": [
+      {
+        "questionId": "q_1790742636571_1",
+        "questionNumber": 1,
+        "maxMarks": 40,
+        "marksObtained": 4,
+        "ocrConfidence": "0.87",
+        "handwrittenSnippet": "// Reference code solution\n",
+        "rubricScores": [
+          {
+            "criterionId": "r_1_1",
+            "criterion": "Syntax & Declarations",
+            "maxMarks": 3,
+            "awarded": 1.2,
+            "remarks": "Incomplete snippet detected."
+          },
+          {
+            "criterionId": "r_1_2",
+            "criterion": "Algorithm Correctness",
+            "maxMarks": 5,
+            "awarded": 2,
+            "remarks": "Incomplete snippet detected."
+          },
+          {
+            "criterionId": "r_1_3",
+            "criterion": "Edge Handling",
+            "maxMarks": 2,
+            "awarded": 0.8,
+            "remarks": "Incomplete snippet detected."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": []
+      }
+    ]
+  },
+  {
+    "id": "std_101",
+    "rollNo": "2100320100045",
+    "studentName": "Aryan Sharma",
+    "section": "CSE-A",
+    "semester": "4th Sem",
+    "totalMarksObtained": 26.8,
+    "maxMarksTotal": 30,
+    "percentage": 89.3,
+    "grade": "A",
+    "status": "Evaluated",
+    "evaluationDate": "2026-09-30T05:20:50.908Z",
+    "overallFeedback": "Solid grasp of data structure algorithms and pointer arithmetic. Very clean presentation.",
+    "answers": [
+      {
+        "questionId": "q1",
+        "questionNumber": 1,
+        "maxMarks": 10,
+        "marksObtained": 9.2,
+        "ocrConfidence": 0.94,
+        "handwrittenSnippet": "struct Node* reverseList(struct Node* head) {\n    struct Node *prev = NULL;\n    struct Node *curr = head;\n    struct Node *next = NULL;\n    while(curr != NULL) {\n        next = curr->next;\n        curr->next = prev;\n        prev = curr;\n        curr = next;\n    }\n    return prev;\n}\n// Time Complexity: O(N)",
+        "rubricScores": [
+          {
+            "criterion": "Pointer Declarations & Initialization (prev=NULL, curr=head, next=NULL)",
+            "maxMarks": 2,
+            "awarded": 2,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Loop Condition & Safe Next Pointer Storage (`next = curr->next`)",
+            "maxMarks": 3,
+            "awarded": 2.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Pointer Inversion & Sliding Steps (`curr->next = prev; prev = curr; curr = next;`)",
+            "maxMarks": 3,
+            "awarded": 2.6,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return New Head (`return prev;`) and Correct Complexity Analysis",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q2",
+        "questionNumber": 2,
+        "maxMarks": 10,
+        "marksObtained": 8.9,
+        "ocrConfidence": 0.92,
+        "handwrittenSnippet": "int binarySearch(int arr[], int n, int target) {\n    int low = 0, high = n - 1;\n    while (low <= high) {\n        int mid = low + (high - low) / 2;\n        if (arr[mid] == target)\n            return mid;\n        else if (arr[mid] < target)\n            low = mid + 1;\n        else\n            high = mid - 1;\n    }\n    return -1;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Array Boundary Initialization (`low = 0`, `high = n - 1`)",
+            "maxMarks": 2,
+            "awarded": 1.6,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "While Loop Bound & Overflow-Safe Mid Calculation (`low <= high`, `mid = low + (high-low)/2`)",
+            "maxMarks": 3,
+            "awarded": 2.6,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Partitioning Logic (`arr[mid] < target -> low = mid + 1`, else `high = mid - 1`)",
+            "maxMarks": 3,
+            "awarded": 2.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return Mid on Match & Return -1 Sentinel for Element Not Found",
+            "maxMarks": 2,
+            "awarded": 2,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q3",
+        "questionNumber": 3,
+        "maxMarks": 10,
+        "marksObtained": 8.7,
+        "ocrConfidence": 0.91,
+        "handwrittenSnippet": "bool isBalanced(char* exp) {\n    char stack[100];\n    int top = -1;\n    for(int i = 0; exp[i] != '\\0'; i++) {\n        char ch = exp[i];\n        if (ch == '(' || ch == '{' || ch == '[') {\n            stack[++top] = ch;\n        } else if (ch == ')' || ch == '}' || ch == ']') {\n            if (top == -1) return false;\n            char popped = stack[top--];\n            if (ch == ')' && popped != '(') return false;\n            if (ch == '}' && popped != '{') return false;\n            if (ch == ']' && popped != '[') return false;\n        }\n    }\n    return (top == -1);\n}",
+        "rubricScores": [
+          {
+            "criterion": "Stack Data Structure Initialization & Top Pointer (`top = -1`)",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Push Logic for Opening Delimiters (`(`, `{`, `[`)",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Underflow Check (`top == -1`) & Pair Matching Logic for Closing Delimiters",
+            "maxMarks": 4,
+            "awarded": 3.5,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Final Stack State Check (`return top == -1`) for Dangling Open Delimiters",
+            "maxMarks": 2,
+            "awarded": 1.8,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "std_102",
+    "rollNo": "2100320100112",
+    "studentName": "Sneha Verma",
+    "section": "CSE-A",
+    "semester": "4th Sem",
+    "totalMarksObtained": 27.3,
+    "maxMarksTotal": 30,
+    "percentage": 91,
+    "grade": "A+",
+    "status": "Evaluated",
+    "evaluationDate": "2026-09-30T05:20:50.908Z",
+    "overallFeedback": "Solid grasp of data structure algorithms and pointer arithmetic. Very clean presentation.",
+    "answers": [
+      {
+        "questionId": "q1",
+        "questionNumber": 1,
+        "maxMarks": 10,
+        "marksObtained": 9.1,
+        "ocrConfidence": 0.95,
+        "handwrittenSnippet": "struct Node* reverseList(struct Node* head) {\n    struct Node *p = NULL, *c = head, *n = NULL;\n    while(c != NULL) {\n        n = c->next;\n        c->next = p;\n        p = c;\n        c = n;\n    }\n    return p;\n}\n// Time: O(n), Space: O(1)",
+        "rubricScores": [
+          {
+            "criterion": "Pointer Declarations & Initialization (prev=NULL, curr=head, next=NULL)",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Loop Condition & Safe Next Pointer Storage (`next = curr->next`)",
+            "maxMarks": 3,
+            "awarded": 2.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Pointer Inversion & Sliding Steps (`curr->next = prev; prev = curr; curr = next;`)",
+            "maxMarks": 3,
+            "awarded": 2.6,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return New Head (`return prev;`) and Correct Complexity Analysis",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q2",
+        "questionNumber": 2,
+        "maxMarks": 10,
+        "marksObtained": 9.4,
+        "ocrConfidence": 0.93,
+        "handwrittenSnippet": "int binarySearch(int arr[], int n, int target) {\n    int low = 0, high = n - 1;\n    while (low <= high) {\n        int mid = (low + high) / 2;\n        if (arr[mid] == target)\n            return mid;\n        else if (arr[mid] < target)\n            low = mid + 1;\n        else\n            high = mid - 1;\n    }\n    return -1;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Array Boundary Initialization (`low = 0`, `high = n - 1`)",
+            "maxMarks": 2,
+            "awarded": 2,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "While Loop Bound & Overflow-Safe Mid Calculation (`low <= high`, `mid = low + (high-low)/2`)",
+            "maxMarks": 3,
+            "awarded": 2.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Partitioning Logic (`arr[mid] < target -> low = mid + 1`, else `high = mid - 1`)",
+            "maxMarks": 3,
+            "awarded": 2.8,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return Mid on Match & Return -1 Sentinel for Element Not Found",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q3",
+        "questionNumber": 3,
+        "maxMarks": 10,
+        "marksObtained": 8.8,
+        "ocrConfidence": 0.89,
+        "handwrittenSnippet": "bool isBalanced(char* exp) {\n    char s[100];\n    int top = -1;\n    for(int i=0; exp[i]!='\\0'; i++) {\n        if(exp[i]=='(' || exp[i]=='{')\n            s[++top] = exp[i];\n        else if(exp[i]==')' || exp[i]=='}') {\n            if(top == -1) return false;\n            char c = s[top--];\n            if(exp[i]==')' && c!='(') return false;\n            if(exp[i]=='}' && c!='{') return false;\n        }\n    }\n    return top == -1;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Stack Data Structure Initialization & Top Pointer (`top = -1`)",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Push Logic for Opening Delimiters (`(`, `{`, `[`)",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Underflow Check (`top == -1`) & Pair Matching Logic for Closing Delimiters",
+            "maxMarks": 4,
+            "awarded": 3.5,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Final Stack State Check (`return top == -1`) for Dangling Open Delimiters",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "std_103",
+    "rollNo": "2100320100088",
+    "studentName": "Rohan Gupta",
+    "section": "CSE-B",
+    "semester": "4th Sem",
+    "totalMarksObtained": 26.5,
+    "maxMarksTotal": 30,
+    "percentage": 88.3,
+    "grade": "A",
+    "status": "Evaluated",
+    "evaluationDate": "2026-09-30T05:20:50.908Z",
+    "overallFeedback": "Solid grasp of data structure algorithms and pointer arithmetic. Very clean presentation.",
+    "answers": [
+      {
+        "questionId": "q1",
+        "questionNumber": 1,
+        "maxMarks": 10,
+        "marksObtained": 8.9,
+        "ocrConfidence": 0.88,
+        "handwrittenSnippet": "struct Node* reverseList(struct Node* head) {\n    struct Node *prev = NULL;\n    struct Node *curr = head;\n    while(curr != NULL) {\n        curr->next = prev;\n        struct Node *next = curr->next;\n        prev = curr;\n        curr = next;\n    }\n    return prev;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Pointer Declarations & Initialization (prev=NULL, curr=head, next=NULL)",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Loop Condition & Safe Next Pointer Storage (`next = curr->next`)",
+            "maxMarks": 3,
+            "awarded": 2.8,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Pointer Inversion & Sliding Steps (`curr->next = prev; prev = curr; curr = next;`)",
+            "maxMarks": 3,
+            "awarded": 2.5,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return New Head (`return prev;`) and Correct Complexity Analysis",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q2",
+        "questionNumber": 2,
+        "maxMarks": 10,
+        "marksObtained": 8.9,
+        "ocrConfidence": 0.9,
+        "handwrittenSnippet": "int binarySearch(int arr[], int n, int target) {\n    int low = 0, high = n;\n    while (low < high) {\n        int mid = (low + high) / 2;\n        if (arr[mid] == target)\n            return mid;\n        else if (arr[mid] < target)\n            low = mid + 1;\n        else\n            high = mid - 1;\n    }\n    return -1;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Array Boundary Initialization (`low = 0`, `high = n - 1`)",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "While Loop Bound & Overflow-Safe Mid Calculation (`low <= high`, `mid = low + (high-low)/2`)",
+            "maxMarks": 3,
+            "awarded": 2.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Partitioning Logic (`arr[mid] < target -> low = mid + 1`, else `high = mid - 1`)",
+            "maxMarks": 3,
+            "awarded": 2.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return Mid on Match & Return -1 Sentinel for Element Not Found",
+            "maxMarks": 2,
+            "awarded": 1.6,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q3",
+        "questionNumber": 3,
+        "maxMarks": 10,
+        "marksObtained": 8.7,
+        "ocrConfidence": 0.85,
+        "handwrittenSnippet": "bool isBalanced(char* exp) {\n    char stack[50];\n    int top = -1;\n    for(int i=0; exp[i]!='\\0'; i++) {\n        if(exp[i] == '(') {\n            stack[++top] = exp[i];\n        } else if(exp[i] == ')') {\n            char p = stack[top--];\n            if(p != '(') return false;\n        }\n    }\n    return true;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Stack Data Structure Initialization & Top Pointer (`top = -1`)",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Push Logic for Opening Delimiters (`(`, `{`, `[`)",
+            "maxMarks": 2,
+            "awarded": 1.8,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Underflow Check (`top == -1`) & Pair Matching Logic for Closing Delimiters",
+            "maxMarks": 4,
+            "awarded": 3.3,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Final Stack State Check (`return top == -1`) for Dangling Open Delimiters",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": false,
+          "errors": [
+            "Unbalanced parentheses in statement"
+          ]
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          },
+          {
+            "line": 8,
+            "type": "error",
+            "text": "Unbalanced parentheses in statement"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "std_104",
+    "rollNo": "2100320100076",
+    "studentName": "Priyanshu Singh",
+    "section": "CSE-B",
+    "semester": "4th Sem",
+    "totalMarksObtained": 27.6,
+    "maxMarksTotal": 30,
+    "percentage": 92,
+    "grade": "A+",
+    "status": "Evaluated",
+    "evaluationDate": "2026-09-30T05:20:50.908Z",
+    "overallFeedback": "Solid grasp of data structure algorithms and pointer arithmetic. Very clean presentation.",
+    "answers": [
+      {
+        "questionId": "q1",
+        "questionNumber": 1,
+        "maxMarks": 10,
+        "marksObtained": 9.2,
+        "ocrConfidence": 0.89,
+        "handwrittenSnippet": "struct Node* reverseList(struct Node* head) {\n    struct Node *prev = NULL;\n    struct Node *curr = head;\n    struct Node *next = NULL;\n    while(curr != NULL) {\n        next = curr->next;\n        curr->next = prev\n        prev = curr;\n        curr = next;\n    }\n    return prev;\n}\n// T: O(n), S: O(1)",
+        "rubricScores": [
+          {
+            "criterion": "Pointer Declarations & Initialization (prev=NULL, curr=head, next=NULL)",
+            "maxMarks": 2,
+            "awarded": 1.8,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Loop Condition & Safe Next Pointer Storage (`next = curr->next`)",
+            "maxMarks": 3,
+            "awarded": 2.6,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Pointer Inversion & Sliding Steps (`curr->next = prev; prev = curr; curr = next;`)",
+            "maxMarks": 3,
+            "awarded": 2.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return New Head (`return prev;`) and Correct Complexity Analysis",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q2",
+        "questionNumber": 2,
+        "maxMarks": 10,
+        "marksObtained": 9.3,
+        "ocrConfidence": 0.94,
+        "handwrittenSnippet": "int binarySearch(int arr[], int n, int target) {\n    int low = 0, high = n - 1;\n    while (low <= high) {\n        int mid = low + (high - low) / 2;\n        if (arr[mid] == target)\n            return mid;\n        else if (arr[mid] < target)\n            low = mid + 1;\n        else\n            high = mid - 1;\n    }\n    return -1;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Array Boundary Initialization (`low = 0`, `high = n - 1`)",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "While Loop Bound & Overflow-Safe Mid Calculation (`low <= high`, `mid = low + (high-low)/2`)",
+            "maxMarks": 3,
+            "awarded": 2.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Partitioning Logic (`arr[mid] < target -> low = mid + 1`, else `high = mid - 1`)",
+            "maxMarks": 3,
+            "awarded": 2.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return Mid on Match & Return -1 Sentinel for Element Not Found",
+            "maxMarks": 2,
+            "awarded": 1.8,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q3",
+        "questionNumber": 3,
+        "maxMarks": 10,
+        "marksObtained": 9.1,
+        "ocrConfidence": 0.86,
+        "handwrittenSnippet": "bool isBalanced(char* exp) {\n    char st[100];\n    int top = -1;\n    for(int i=0; exp[i]!='\\0'; i++) {\n        if(exp[i]=='(' || exp[i]=='{')\n            st[++top] = exp[i];\n        else if(exp[i]==')' || exp[i]=='}') {\n            if(top == -1) return false;\n            char c = st[top--];\n            if(exp[i]==')' && c!='(') return false;\n        }\n    }\n    return top == -1;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Stack Data Structure Initialization & Top Pointer (`top = -1`)",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Push Logic for Opening Delimiters (`(`, `{`, `[`)",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Underflow Check (`top == -1`) & Pair Matching Logic for Closing Delimiters",
+            "maxMarks": 4,
+            "awarded": 3.8,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Final Stack State Check (`return top == -1`) for Dangling Open Delimiters",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "std_105",
+    "rollNo": "2100320100021",
+    "studentName": "Ananya Mishra",
+    "section": "CSE-C",
+    "semester": "4th Sem",
+    "totalMarksObtained": 27.200000000000003,
+    "maxMarksTotal": 30,
+    "percentage": 90.7,
+    "grade": "A+",
+    "status": "Evaluated",
+    "evaluationDate": "2026-09-30T05:20:50.908Z",
+    "overallFeedback": "Solid grasp of data structure algorithms and pointer arithmetic. Very clean presentation.",
+    "answers": [
+      {
+        "questionId": "q1",
+        "questionNumber": 1,
+        "maxMarks": 10,
+        "marksObtained": 9,
+        "ocrConfidence": 0.98,
+        "handwrittenSnippet": "struct Node* reverseList(struct Node* head) {\n    struct Node *prev = NULL;\n    struct Node *curr = head;\n    struct Node *next = NULL;\n    while(curr != NULL) {\n        next = curr->next;\n        curr->next = prev;\n        prev = curr;\n        curr = next;\n    }\n    return prev;\n}\n// Time Complexity: O(n)\n// Space Complexity: O(1) Auxiliary space",
+        "rubricScores": [
+          {
+            "criterion": "Pointer Declarations & Initialization (prev=NULL, curr=head, next=NULL)",
+            "maxMarks": 2,
+            "awarded": 1.8,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Loop Condition & Safe Next Pointer Storage (`next = curr->next`)",
+            "maxMarks": 3,
+            "awarded": 2.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Pointer Inversion & Sliding Steps (`curr->next = prev; prev = curr; curr = next;`)",
+            "maxMarks": 3,
+            "awarded": 2.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return New Head (`return prev;`) and Correct Complexity Analysis",
+            "maxMarks": 2,
+            "awarded": 1.6,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q2",
+        "questionNumber": 2,
+        "maxMarks": 10,
+        "marksObtained": 9.1,
+        "ocrConfidence": 0.96,
+        "handwrittenSnippet": "int binarySearch(int arr[], int n, int target) {\n    int low = 0, high = n - 1;\n    while (low <= high) {\n        int mid = low + (high - low) / 2;\n        if (arr[mid] == target)\n            return mid;\n        else if (arr[mid] < target)\n            low = mid + 1;\n        else\n            high = mid - 1;\n    }\n    return -1;\n}\n// Time: O(log n)",
+        "rubricScores": [
+          {
+            "criterion": "Array Boundary Initialization (`low = 0`, `high = n - 1`)",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "While Loop Bound & Overflow-Safe Mid Calculation (`low <= high`, `mid = low + (high-low)/2`)",
+            "maxMarks": 3,
+            "awarded": 3,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Partitioning Logic (`arr[mid] < target -> low = mid + 1`, else `high = mid - 1`)",
+            "maxMarks": 3,
+            "awarded": 2.6,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return Mid on Match & Return -1 Sentinel for Element Not Found",
+            "maxMarks": 2,
+            "awarded": 1.8,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q3",
+        "questionNumber": 3,
+        "maxMarks": 10,
+        "marksObtained": 9.1,
+        "ocrConfidence": 0.95,
+        "handwrittenSnippet": "bool isBalanced(char* exp) {\n    char stack[100];\n    int top = -1;\n    for (int i = 0; exp[i] != '\\0'; i++) {\n        char ch = exp[i];\n        if (ch == '(' || ch == '{' || ch == '[') {\n            stack[++top] = ch;\n        } else if (ch == ')' || ch == '}' || ch == ']') {\n            if (top == -1) return false;\n            char popped = stack[top--];\n            if ((ch == ')' && popped != '(') ||\n                (ch == '}' && popped != '{') ||\n                (ch == ']' && popped != '['))\n                return false;\n        }\n    }\n    return (top == -1);\n}",
+        "rubricScores": [
+          {
+            "criterion": "Stack Data Structure Initialization & Top Pointer (`top = -1`)",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Push Logic for Opening Delimiters (`(`, `{`, `[`)",
+            "maxMarks": 2,
+            "awarded": 1.8,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Underflow Check (`top == -1`) & Pair Matching Logic for Closing Delimiters",
+            "maxMarks": 4,
+            "awarded": 3.8,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Final Stack State Check (`return top == -1`) for Dangling Open Delimiters",
+            "maxMarks": 2,
+            "awarded": 1.6,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "std_106",
+    "rollNo": "2100320100062",
+    "studentName": "Kartik Tyagi",
+    "section": "CSE-C",
+    "semester": "4th Sem",
+    "totalMarksObtained": 26.8,
+    "maxMarksTotal": 30,
+    "percentage": 89.3,
+    "grade": "A",
+    "status": "Evaluated",
+    "evaluationDate": "2026-09-30T05:20:50.908Z",
+    "overallFeedback": "Solid grasp of data structure algorithms and pointer arithmetic. Very clean presentation.",
+    "answers": [
+      {
+        "questionId": "q1",
+        "questionNumber": 1,
+        "maxMarks": 10,
+        "marksObtained": 8.7,
+        "ocrConfidence": 0.79,
+        "handwrittenSnippet": "struct Node* reverseList(struct Node* head) {\n    struct Node *p = NULL;\n    struct Node *c = head;\n    while(c != NULL) {\n        c->next = p;\n        p = c;\n        c = c->next;\n    }\n    return p;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Pointer Declarations & Initialization (prev=NULL, curr=head, next=NULL)",
+            "maxMarks": 2,
+            "awarded": 1.6,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Loop Condition & Safe Next Pointer Storage (`next = curr->next`)",
+            "maxMarks": 3,
+            "awarded": 2.5,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Pointer Inversion & Sliding Steps (`curr->next = prev; prev = curr; curr = next;`)",
+            "maxMarks": 3,
+            "awarded": 2.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return New Head (`return prev;`) and Correct Complexity Analysis",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q2",
+        "questionNumber": 2,
+        "maxMarks": 10,
+        "marksObtained": 8.8,
+        "ocrConfidence": 0.84,
+        "handwrittenSnippet": "int binarySearch(int arr[], int n, int target) {\n    int low = 0, high = n;\n    for(int i=0; i<n; i++) {\n        if(arr[i] == target) return i;\n    }\n    return -1;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Array Boundary Initialization (`low = 0`, `high = n - 1`)",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "While Loop Bound & Overflow-Safe Mid Calculation (`low <= high`, `mid = low + (high-low)/2`)",
+            "maxMarks": 3,
+            "awarded": 2.7,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Partitioning Logic (`arr[mid] < target -> low = mid + 1`, else `high = mid - 1`)",
+            "maxMarks": 3,
+            "awarded": 2.5,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Return Mid on Match & Return -1 Sentinel for Element Not Found",
+            "maxMarks": 2,
+            "awarded": 1.7,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      },
+      {
+        "questionId": "q3",
+        "questionNumber": 3,
+        "maxMarks": 10,
+        "marksObtained": 9.3,
+        "ocrConfidence": 0.81,
+        "handwrittenSnippet": "bool isBalanced(char* exp) {\n    int count = 0;\n    for(int i=0; exp[i]!='\\0'; i++) {\n        if(exp[i] == '(') count++;\n        if(exp[i] == ')') count--;\n    }\n    return count == 0;\n}",
+        "rubricScores": [
+          {
+            "criterion": "Stack Data Structure Initialization & Top Pointer (`top = -1`)",
+            "maxMarks": 2,
+            "awarded": 2,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Push Logic for Opening Delimiters (`(`, `{`, `[`)",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Underflow Check (`top == -1`) & Pair Matching Logic for Closing Delimiters",
+            "maxMarks": 4,
+            "awarded": 3.5,
+            "remarks": "Good logical structure and syntax."
+          },
+          {
+            "criterion": "Final Stack State Check (`return top == -1`) for Dangling Open Delimiters",
+            "maxMarks": 2,
+            "awarded": 1.9,
+            "remarks": "Good logical structure and syntax."
+          }
+        ],
+        "syntaxCheck": {
+          "valid": true,
+          "errors": []
+        },
+        "annotations": [
+          {
+            "line": 4,
+            "type": "success",
+            "text": "Loop traversal structure verified"
+          }
+        ]
+      }
+    ]
+  }
+]

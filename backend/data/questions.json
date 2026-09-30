@@ -1,0 +1,31 @@
+[
+  {
+    "id": "q_1790742636571_1",
+    "questionNumber": 1,
+    "title": "Uploaded Question 1",
+    "maxMarks": 40,
+    "language": "C / C++",
+    "description": "%PDF-1.7\r\n%����\r\n1 0 obj\r\n<</Type/Catalog/Pages 2 0 R/Lang(en) /StructTreeRoot 31 0 R/MarkInfo<</Marked true>>/Metadata 373 0 R/ViewerPreferences 374 0 R>>\r\nendobj\r\n2 0 obj\r\n<</Type/Pages/Count 2/Kids[ 3 0 R 28 0 R] >>\r\nendobj\r\n3 0 obj\r\n<</Type/Page/Parent 2 0 R/Resources<</Font<</F1 5 0 R/F2 9 0 R/",
+    "modelCode": "// Reference code solution\n",
+    "rubric": [
+      {
+        "id": "r_1_1",
+        "criterion": "Syntax & Declarations",
+        "maxMarks": 3,
+        "requiredPatterns": []
+      },
+      {
+        "id": "r_1_2",
+        "criterion": "Algorithm Correctness",
+        "maxMarks": 5,
+        "requiredPatterns": []
+      },
+      {
+        "id": "r_1_3",
+        "criterion": "Edge Handling",
+        "maxMarks": 2,
+        "requiredPatterns": []
+      }
+    ]
+  }
+]
